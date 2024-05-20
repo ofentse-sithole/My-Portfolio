@@ -414,10 +414,14 @@ nav .nav-links a:hover {
     }
 }
 /*Contact*/
+
 .contact {
+    display: flex; /* Use flexbox to align children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
     background-color: #267c9e; /* Dark background for the block */
     color: white; /* White text color */
-    text-align: center; /* Center text alignment */
     padding: 50px; /* Padding around the content */
     margin: auto; /* Center the block horizontally */
     max-width: 800px; /* Maximum width of the block */
@@ -425,14 +429,21 @@ nav .nav-links a:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
 }
 
+.contact p {
+    display: flex; /* Use flexbox for the paragraph */
+    align-items: center; /* Center items vertically within the paragraph */
+    justify-content: center; /* Center items horizontally within the paragraph */
+    font-size: 18px; /* Font size for the text */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
 .contact h2 {
     margin-bottom: 30px; /* Space below the heading */
 }
 
-.contact p {
-    font-size: 18px; /* Font size for the text */
-    line-height: 1.6; /* Line height for readability */
-    margin-bottom: 20px; /* Space below the paragraph */
+
+.contact i {
+    margin-bottom: 10px; /* Add space below the icon if needed */
 }
 
 /* Responsive Design */
