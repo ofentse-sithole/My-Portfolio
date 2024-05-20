@@ -1,0 +1,625 @@
+/*SVG Css*/
+.waves > use {
+    animation: move-forever 2s -2s linear infinite;
+}
+
+.waves > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 6s;
+}
+
+.waves > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 3s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+svg {
+    position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 15vw;
+max-height: 100px;
+z-index: -1; 
+}
+
+/* Change the fill color to light blue */
+.waves > use {
+    fill: #267c9e; /* Light blue color */
+    fill-opacity: 0.2;
+}
+
+.waves > use:nth-child(2) {
+    fill: #267c9e; /* Light blue color */
+    fill-opacity: 0.5;
+}
+
+.waves > use:nth-child(3) {
+    fill: #267c9e; /* Light blue color */
+    fill-opacity: 0.9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 
+                0 0 50px #4fc3dc, 
+                0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 
+                0 0 50px #ff2d75, 
+                0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .bubbles span {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+        box-shadow: 0 0 0 5px #4fc3dc44, 
+                    0 0 25px #4fc3dc, 
+                    0 0 50px #4fc3dc;
+    }
+
+    .bubbles span:nth-child(even) {
+        box-shadow: 0 0 0 5px #ff2d7544, 
+                    0 0 25px #ff2d75, 
+                    0 0 50px #ff2d75;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .bubbles span {
+        width: 25px;
+        height: 25px;
+        margin: 0 3px;
+        box-shadow: 0 0 0 7px #4fc3dc44, 
+                    0 0 35px #4fc3dc, 
+                    0 0 70px #4fc3dc;
+    }
+
+    .bubbles span:nth-child(even) {
+        box-shadow: 0 0 0 7px #ff2d7544, 
+                    0 0 35px #ff2d75, 
+                    0 0 70px #ff2d75;
+    }
+}
+
+
+
+
+/* CSS for the Navigation Bar */
+nav {
+    background-color: #267c9e; /* Dark background */
+    padding: 20px; /* Increased padding */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+nav .heading {
+    /* Removed margin-right: auto; */
+}
+
+nav .heading h4 {
+    color: white; /* White text for the heading */
+    margin: 0;
+    font-size: 24px; /* Increased font size */
+}
+
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin: 0 20px; /* Increased margin for more spacing */
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: white; /* White text for links */
+    font-size: 18px; /* Increased font size */
+}
+
+nav .nav-links a.active {
+    font-weight: bold; /* Highlight the active link */
+}
+
+nav .nav-links a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+
+/*Home*/
+.home {
+    background-color: #267c9e; /* Dark background for the block */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px; /* Padding around the content */
+    margin: auto; /* Center the block horizontally */
+    max-width: 800px; /* Maximum width of the block */
+    border-radius: 10px; /* Rounded corners for the block */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
+}
+
+.home h1 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.home p {
+    font-size: 18px; /* Font size for the paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        padding: 30px; /* Reduced padding for mobile */
+        max-width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .home h1 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Reduced margin for mobile */
+    }
+
+    .home p {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin-bottom: 15px; /* Reduced margin for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .home {
+        padding: 40px; /* Slightly reduced padding for tablets and small laptops */
+        max-width: 700px; /* Slightly reduced max-width */
+    }
+
+    .home h1 {
+        font-size: 28px; /* Adjust font size for tablets and small laptops */
+    }
+
+    .home p {
+        font-size: 17px; /* Adjust font size for tablets and small laptops */
+    }
+}
+
+
+/*Skills*/
+.skills {
+    background-color: #267c9e; /* Dark background for the block */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px; /* Padding around the content */
+    margin: auto; /* Center the block horizontally */
+    max-width: 1200px; /* Maximum width of the block */
+    border-radius: 10px; /* Rounded corners for the block */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
+    display: flex; /* Use flexbox to create rows */
+    flex-direction: column; /* Stack children elements in a column */
+}
+
+.skills h2 {
+    background-color: #144457; /* Slightly lighter background for headings */
+    padding: 10px 0; /* Padding for headings */
+    margin-top: 20px; /* Space above each heading */
+    border-radius: 5px; /* Rounded corners for headings */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Shadow effect for headings */
+    width: 100%; /* Full width for headings */
+}
+
+.skills ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for list items */
+    justify-content: center; /* Center list items horizontally */
+    flex-wrap: wrap; /* Allow list items to wrap */
+}
+
+.skills li {
+    background-color: #144457; /* Slightly lighter background for list items */
+    padding: 10px 20px; /* Padding for list items */
+    margin: 5px; /* Margin for spacing between list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Shadow effect for list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills {
+        padding: 30px; /* Reduced padding for mobile */
+        max-width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .skills h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+        padding: 8px 0; /* Adjust padding for mobile */
+        margin-top: 15px; /* Reduced margin for mobile */
+    }
+
+    .skills li {
+        font-size: 16px; /* Adjust font size for mobile */
+        padding: 8px 15px; /* Adjust padding for mobile */
+        margin: 5px 3px; /* Adjust margin for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .skills {
+        padding: 40px; /* Slightly reduced padding for tablets and small laptops */
+        max-width: 1000px; /* Slightly reduced max-width */
+    }
+
+    .skills h2 {
+        font-size: 28px; /* Adjust font size for tablets and small laptops */
+        padding: 9px 0; /* Adjust padding for tablets and small laptops */
+        margin-top: 18px; /* Adjust margin for tablets and small laptops */
+    }
+
+    .skills li {
+        font-size: 17px; /* Adjust font size for tablets and small laptops */
+        padding: 9px 18px; /* Adjust padding for tablets and small laptops */
+        margin: 5px 4px; /* Adjust margin for tablets and small laptops */
+    }
+}
+
+/* Reference */
+.container {
+    background-color: #267c9e;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container h2 {
+    background-color: #144457;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.table-responsive {
+    margin: 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    background-color: #144457;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #3b3b3b;
+    padding: 10px;
+}
+
+.table th {
+    background-color: #144457;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #051529;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #144457;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #144457;
+}
+
+
+/* Responsive styles */
+@media (min-width: 350px) and (max-width: 1200px)  {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .container h2 {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .container h2 {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .table th, .table td {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+/*Contact*/
+.contact {
+    background-color: #267c9e; /* Dark background for the block */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px; /* Padding around the content */
+    margin: auto; /* Center the block horizontally */
+    max-width: 800px; /* Maximum width of the block */
+    border-radius: 10px; /* Rounded corners for the block */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
+}
+
+.contact h2 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.contact p {
+    font-size: 18px; /* Font size for the text */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Responsive Design */
+@media (min-width: 350px) and (max-width: 1200px)  {
+    .contact {
+        padding: 30px; /* Reduced padding for mobile */
+        max-width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .contact h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Reduced margin for mobile */
+    }
+
+    .contact p {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin-bottom: 15px; /* Reduced margin for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .contact {
+        padding: 40px; /* Slightly reduced padding for tablets and small laptops */
+        max-width: 700px; /* Slightly reduced max-width */
+    }
+
+    .contact h2 {
+        font-size: 28px; /* Adjust font size for tablets and small laptops */
+        margin-bottom: 25px; /* Adjust margin for tablets and small laptops */
+    }
+
+    .contact p {
+        font-size: 17px; /* Adjust font size for tablets and small laptops */
+        margin-bottom: 18px; /* Adjust margin for tablets and small laptops */
+    }
+}
+
+/*about me*/
+.about-me {
+    background-color: #267c9e; /* Dark background for the block */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px; /* Padding around the content */
+    margin: auto; /* Center the block horizontally */
+    max-width: 800px; /* Maximum width of the block */
+    border-radius: 10px; /* Rounded corners for the block */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
+}
+
+.about-me h2 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.about-me p {
+    font-size: 18px; /* Font size for the paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Responsive Design */
+@media (min-width: 350px) and (max-width: 1200px)  {
+    .about-me {
+        padding: 30px; /* Reduced padding for mobile */
+        max-width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .about-me h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Reduced margin for mobile */
+    }
+
+    .about-me p {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin-bottom: 15px; /* Reduced margin for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .about-me {
+        padding: 40px; /* Slightly reduced padding for tablets and small laptops */
+        max-width: 700px; /* Slightly reduced max-width */
+    }
+
+    .about-me h2 {
+        font-size: 28px; /* Adjust font size for tablets and small laptops */
+        margin-bottom: 25px; /* Adjust margin for tablets and small laptops */
+    }
+
+    .about-me p {
+        font-size: 17px; /* Adjust font size for tablets and small laptops */
+        margin-bottom: 18px; /* Adjust margin for tablets and small laptops */
+    }
+}
+
+/*Projects*/
+.project {
+    background-color: #267c9e; /* Dark background for the block */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px; /* Padding around the content */
+    margin: auto; /* Center the block horizontally */
+    max-width: 1200px; /* Maximum width of the block */
+    border-radius: 10px; /* Rounded corners for the block */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
+    display: flex; /* Use flexbox to create rows */
+    flex-direction: column; /* Stack children elements in a column */
+    gap: 20px; /* Space between the project entries */
+}
+
+.project p {
+    background-color: #144457; /* Slightly lighter background for each project entry */
+    padding: 20px; /* Padding inside each project entry */
+    border-radius: 5px; /* Rounded corners for each project entry */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Shadow effect for each project entry */
+    margin: 0; /* Remove default margin */
+}
+
+.project b {
+    display: block; /* Make the project title a block element */
+    margin-bottom: 10px; /* Space below the project title */
+    font-size: 20px; /* Font size for the project title */
+}
+
+.project hr {
+    border: 1px solid #144457; /* Border color for the horizontal rule */
+    margin: 10px 0; /* Space around the horizontal rule */
+}
+
+.project a {
+    color: #5ea5f6; /* Lighter color for links */
+    text-decoration: none; /* No underline for links */
+}
+
+.project a:hover {
+    color: #ececec; /* White color on hover for links */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        padding: 30px; /* Reduced padding for mobile */
+        max-width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .project p {
+        padding: 15px; /* Reduced padding inside each project entry */
+    }
+
+    .project b {
+        font-size: 18px; /* Adjust font size for the project title on mobile */
+    }
+
+    .project hr {
+        margin: 8px 0; /* Reduced space around the horizontal rule */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .project {
+        padding: 40px; /* Slightly reduced padding for tablets and small laptops */
+        max-width: 1000px; /* Slightly reduced max-width */
+    }
+
+    .project p {
+        padding: 18px; /* Slightly reduced padding inside each project entry */
+    }
+
+    .project b {
+        font-size: 19px; /* Adjust font size for the project title on tablets and small laptops */
+    }
+
+    .project hr {
+        margin: 9px 0; /* Adjust space around the horizontal rule */
+    }
+}
+
+/*picture*/
+.picture {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* Full height of the viewport */
+}
+
+.picture img {
+    border-radius: 50%; /* Make the image round */
+    width: 250px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without being stretched */
+}
