@@ -9,8 +9,6 @@ Welcome to my portfolio! This repository showcases my work and skills as a softw
 - [Skills](#skills)
 - [Contact](#contact)
 - [Features](#features)
-- [How to View](#how-to-view)
-- [Technologies Used](#technologies-used)
 
 ## About Me
 
@@ -23,7 +21,7 @@ I am skilled in multiple programming languages and technologies, and I enjoy lea
 
 ## Skills
 
-- **Programming Languages:** JavaScript, Python, Java, C++, etc.
+- **Programming Languages:** JavaScript, Kotlin, Java, C#, etc.
 - **Web Development:** HTML, CSS, React, Angular, Node.js, etc.
 - **Mobile Development:** Flutter, React Native, Swift, etc.
 - **Database Management:** MySQL, MongoDB, PostgreSQL, etc.
