@@ -201,6 +201,14 @@ nav .nav-links a:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow effect for the block */
 }
 
+
+.animation-column {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+}
+
 .home h1 {
     margin-bottom: 30px; /* Space below the heading */
 }
@@ -210,6 +218,7 @@ nav .nav-links a:hover {
     line-height: 1.6; /* Line height for readability */
     margin-bottom: 20px; /* Space below each paragraph */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -633,4 +642,13 @@ nav .nav-links a:hover {
     width: 250px; /* Set a fixed width */
     height: 250px; /* Set a fixed height to maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the area without being stretched */
+}
+
+/*animation*/
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /* Adjust this value as needed */
 }
